@@ -1,0 +1,23 @@
+#charContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  margin-top: 2rem;
+}
+
+.charBox {
+  margin: 3rem;
+  grid-area: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.charImage {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.charName {
+  margin-top: 1rem;
+}
