@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "./PestControlTrucks.css";
 
 const PestControlTrucks = (props) => {
   const [trucks, setTrucks] = useState([]);
+  const [newTrucks, setNewTrucks] = useState([]);
   useEffect(() => {
     axios
       .get(props.apiURL + "pestControlTruck", {
@@ -14,26 +16,26 @@ const PestControlTrucks = (props) => {
         results.data.map((datum) => {
           let newItem = datum.image;
           setTrucks((oldArray) => [...oldArray, newItem]);
+          let num = Math.random();
+          // console.log(truck);
+          if (num < 0.1 && newTrucks.length < 16) {
+            // console.log(newTrucks.length);
+            setNewTrucks((oldArray) => [...oldArray, newItem]);
+          }
         }, []);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-  const truckTable = trucks.forEach((truck) => {
-    let num = Math.random();
-    console.log(num);
-    if (num > 0.5) {
-      let truckNum = Math.floor(Math.random() * 225 + 1);
-      return (
-        <div>
-          <img src={truck} />
-        </div>
-      );
-    }
+  const images = newTrucks.map((newTruck, index) => {
+    return (
+      <div className="truckBox" key={index}>
+        <img className="truckImg" src={newTruck} />
+      </div>
+    );
   });
-  console.log(trucks);
-  return <div>{truckTable}</div>;
+  return <div className="truckContainer">{images}</div>;
 };
 
 export default PestControlTrucks;

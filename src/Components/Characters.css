@@ -1,6 +1,6 @@
 #charContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   margin-top: 2rem;
 }

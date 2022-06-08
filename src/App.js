@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, Navigate } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
-import Home from "./Components/Home.js";
 import Characters from "./Components/Characters";
 import Episodes from "./Components/Episodes";
 import BurgerOfTheDay from "./Components/BurgerOfTheDay";
 import PestControlTrucks from "./Components/PestControlTrucks";
 import StoreNextDoor from "./Components/StoreNextDoor";
 import CharacterInfo from "./Components/CharacterInfo";
+import EpisodeInfo from "./Components/EpisodeInfo";
+import Home from "./Components/Home";
+import data from "./data/data.json";
 
 function App() {
   const apiURL = "https://bobsburgers-api.herokuapp.com/";
   const [characters, setCharacters] = useState([]);
+  const [episodes, setEpisodes] = useState([]);
   useEffect(() => {
     axios
       .get(apiURL + "characters", {
@@ -27,7 +30,37 @@ function App() {
         console.log(error);
       });
   }, []);
-  console.log(characters.length);
+  useEffect(() => {
+    axios
+      .get(apiURL + "episodes", {
+        headers: {
+          Accept: "application/json",
+        },
+      })
+      .then((results) => {
+        setEpisodes(results.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  const key = "season";
+
+  const uniqueSeason = [
+    ...new Map(episodes.map((item) => [item[key], item])).values(),
+  ];
+
+  const dropdownMaker = uniqueSeason.map((season) => {
+    return (
+      <p className="dropdownItem" key={season.season}>
+        <Link to={"/EpisodeInfo/" + season.season} className="dropdownLink">
+          Season {season.season}
+        </Link>
+      </p>
+    );
+  });
+
   return (
     <div className="App">
       <header>
@@ -42,13 +75,7 @@ function App() {
             <div className="navItems" id="thirdNav">
               Episodes
             </div>
-            <div className="dropdownContent">
-              <p className="dropdownItem">Season One</p>
-              <p className="dropdownItem">Season Two</p>
-              <p className="dropdownItem">Season Three</p>
-              <p className="dropdownItem">Season Four</p>
-              <p className="dropdownItem">Season Five</p>
-            </div>
+            <div className="dropdownContent">{dropdownMaker}</div>
           </div>
           <Link to="/BurgerOfTheDay" className="navItems" id="fourthNav">
             Burger of the Day
@@ -73,12 +100,22 @@ function App() {
             element={<CharacterInfo characters={characters} />}
           />
           <Route path="/Episodes" element={<Episodes />} />
-          <Route path="/BurgerOfTheDay" element={<BurgerOfTheDay />} />
+          <Route
+            path="/BurgerOfTheDay"
+            element={<BurgerOfTheDay apiURL={apiURL} />}
+          />
           <Route
             path="/PestControlTrucks"
             element={<PestControlTrucks apiURL={apiURL} />}
           />
-          <Route path="/StoreNextDoor" element={<StoreNextDoor />} />
+          <Route
+            path="/StoreNextDoor"
+            element={<StoreNextDoor apiURL={apiURL} />}
+          />
+          <Route
+            path="/EpisodeInfo/:season"
+            element={<EpisodeInfo episodes={episodes} data={data} />}
+          />
         </Routes>
       </main>
     </div>

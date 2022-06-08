@@ -1,0 +1,27 @@
+.episodeBox {
+  width: 100vw;
+  height: 25vh;
+  border: 1px solid black;
+}
+
+.eipsodeName {
+  margin: 15px;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+.episodeDesc {
+  font-size: 25px;
+  margin-bottom: 5vh;
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+
+.episodeInfoBox {
+  display: flex;
+  justify-content: center;
+}
+
+.episodeInfo {
+  font-size: 20px;
+}

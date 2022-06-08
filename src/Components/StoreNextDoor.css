@@ -1,0 +1,17 @@
+.storeContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  background: rgb(193, 190, 190);
+}
+
+.storeBox {
+  margin-top: 2.5rem;
+  grid-area: auto;
+}
+
+.storeImg {
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
+}

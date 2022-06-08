@@ -31,6 +31,7 @@
 
 .dropdownContent {
   display: none;
+  opacity: 0.8;
   position: absolute;
 }
 
@@ -43,8 +44,11 @@
 .dropdownItem {
   text-align: left;
   margin: 25px;
-  color: white;
   font-size: 20px;
+}
+
+.dropdownLink {
+  color: white;
 }
 
 .navItems:link {
@@ -60,6 +64,22 @@
 }
 
 .navItems:active {
+  text-decoration: none;
+}
+
+.dropdownLink:link {
+  text-decoration: none;
+}
+
+.dropdownLink:visited {
+  text-decoration: none;
+}
+
+.dropdownLink:hover {
+  text-decoration: none;
+}
+
+.dropdownLink:active {
   text-decoration: none;
 }
 
