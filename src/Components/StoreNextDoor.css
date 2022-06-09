@@ -1,6 +1,6 @@
 .storeContainer {
   display: grid;
-  grid-template-columns: repeat(3, 0.75fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   background: rgb(193, 190, 190);
 }
@@ -11,7 +11,7 @@
 }
 
 .storeImg {
-  width: 500px;
-  height: 500px;
+  width: 30vw;
+  height: auto;
   border: 5px solid black;
 }
