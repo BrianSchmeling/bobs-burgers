@@ -1,34 +1,50 @@
 .episodeBox {
   width: 100vw;
-  height: 300px;
+  height: auto;
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: repeat(3, auto);
 }
 
 .eipsodeName {
-  margin: 15px;
-  font-size: 50px;
+  grid-row: 1;
+  margin: 1vh;
+  font-size: 400%;
   text-decoration: underline;
-  height: 60px;
+  height: 20;
 }
 
 .episodeDesc {
-  font-size: 25px;
+  grid-row: 2;
+  font-size: 150%;
+  margin-top: 3vh;
   margin-left: 15vw;
   margin-right: 15vw;
-  height: 120px;
+  height: 20;
 }
 
 .episodeInfoBox {
-  width: 30vw;
-  margin-right: 35vw;
-  margin-left: 35vw;
+  display: flex;
+  grid-row: 3;
+  width: 40vw;
+  margin-top: 10vh;
+  margin-right: 30vw;
+  margin-left: 30vw;
   display: flex;
   position: relative;
-  height: 60px;
+  justify-content: center;
 }
 
 .episodeInfo {
-  font-size: 20px;
+  display: block;
+  font-size: 120%;
   position: absolute;
   bottom: 0;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .episodeInfoBox {
+    display: none;
+  }
 }

@@ -9,13 +9,3 @@
   height: 100%;
   width: 100%;
 }
-
-.overlay {
-  position: absolute;
-  color: black;
-  transform: translate(-50%, -50%);
-  font-size: 90px;
-  left: 29%;
-  top: 20%;
-  font-family: "Rock Salt", cursive;
-}

@@ -10,16 +10,14 @@ const EpisodeInfo = ({ episodes, data, apiURL }) => {
         if (seasonID == episode.season) {
           return (
             <div className="episodeBox" key={datum.id}>
-              <div className="episodeContent">
-                <p className="eipsodeName">{episode.name}</p>
-                <p className="episodeDesc">{datum.description}</p>
-                <div className="episodeInfoBox">
-                  <p className="episodeInfo">
-                    Season: {episode.season}, Episode: {episode.episode} / Air
-                    Date: {episode.airDate} / Total Viewers:{" "}
-                    {episode.totalViewers}
-                  </p>
-                </div>
+              <p className="eipsodeName">{episode.name}</p>
+              <p className="episodeDesc">{datum.description}</p>
+              <div className="episodeInfoBox">
+                <p className="episodeInfo">
+                  Season: {episode.season}, Episode: {episode.episode} / Air
+                  Date: {episode.airDate} / Total Viewers:{" "}
+                  {episode.totalViewers}
+                </p>
               </div>
             </div>
           );

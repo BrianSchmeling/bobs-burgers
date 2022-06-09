@@ -10,7 +10,6 @@ const Home = () => {
         allow="autoplay; mute; controls"
         allowfullscreen
       ></iframe>
-      <div className="overlay">Bob's Burgers</div>
     </div>
   );
 };

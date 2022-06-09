@@ -3,7 +3,6 @@ import { Link, Route, Routes, Navigate } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 import Characters from "./Components/Characters";
-import Episodes from "./Components/Episodes";
 import BurgerOfTheDay from "./Components/BurgerOfTheDay";
 import PestControlTrucks from "./Components/PestControlTrucks";
 import StoreNextDoor from "./Components/StoreNextDoor";
