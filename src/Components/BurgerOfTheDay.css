@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 
 .BotDContainer {
+  width: 99.8vw;
+  height: 90vh;
+}
+
+.BotDBox {
   background-image: url(./BotD.jpeg);
   background-size: cover;
-  height: 91.5vh;
+  height: 100%;
+  width: 100%;
 }
 
 .BotD {
@@ -12,6 +18,8 @@
   color: white;
   padding-top: 45vh;
   font-family: "Rock Salt", cursive;
-  font-size: 50px;
+  font-size: 40px;
   transform: rotate(-6deg);
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

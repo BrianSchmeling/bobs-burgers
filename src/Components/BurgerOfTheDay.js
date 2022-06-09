@@ -27,10 +27,12 @@ const BurgerOfTheDay = ({ apiURL }) => {
     // Waits until the API finishes loading before rendering the page
     return (
       <div className="BotDContainer">
-        <div className="BotD">
-          {/* <p>hello</p> */}
-          <p>{BotD.name}</p>
-          <p>{BotD.price}</p>
+        <div className="BotDBox">
+          <div className="BotD">
+            {/* <p>hello</p> */}
+            <p>{BotD.name}</p>
+            <p>{BotD.price}</p>
+          </div>
         </div>
       </div>
     );
