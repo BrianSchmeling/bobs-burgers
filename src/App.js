@@ -99,7 +99,7 @@ function App() {
             path={"Characters/:id"}
             element={<CharacterInfo characters={characters} />}
           />
-          <Route path="/Episodes" element={<Episodes />} />
+          {/* <Route path="/Episodes" element={<Episodes />} /> */}
           <Route
             path="/BurgerOfTheDay"
             element={<BurgerOfTheDay apiURL={apiURL} />}
@@ -114,7 +114,9 @@ function App() {
           />
           <Route
             path="/EpisodeInfo/:season"
-            element={<EpisodeInfo episodes={episodes} data={data} />}
+            element={
+              <EpisodeInfo episodes={episodes} data={data} apiURL={apiURL} />
+            }
           />
         </Routes>
       </main>

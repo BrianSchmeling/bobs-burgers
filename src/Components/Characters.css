@@ -1,6 +1,9 @@
+.charPage {
+  width: 100%;
+}
 #charContainer {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-template-rows: auto;
   margin-top: 2rem;
 }

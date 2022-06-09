@@ -18,7 +18,7 @@ const Characters = (props) => {
     );
   });
   return (
-    <div>
+    <div className="charPage">
       <div id="charContainer">{chars}</div>
     </div>
   );

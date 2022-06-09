@@ -17,9 +17,7 @@ const PestControlTrucks = (props) => {
           let newItem = datum.image;
           setTrucks((oldArray) => [...oldArray, newItem]);
           let num = Math.random();
-          // console.log(truck);
           if (num < 0.1 && newTrucks.length < 16) {
-            // console.log(newTrucks.length);
             setNewTrucks((oldArray) => [...oldArray, newItem]);
           }
         }, []);

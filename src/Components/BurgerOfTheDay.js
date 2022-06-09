@@ -15,8 +15,6 @@ const BurgerOfTheDay = ({ apiURL }) => {
       })
       .then((results) => {
         const randomNum = Math.floor(Math.random() * results.data.length);
-        // console.log(randomNum);
-        // console.log(results.data[randomNum]);
         setBotD(results.data[randomNum]);
         setLoading(false);
       })
@@ -24,8 +22,6 @@ const BurgerOfTheDay = ({ apiURL }) => {
         console.log(error);
       });
   }, []);
-  console.log(BotD);
-  // console.log(BotD);
   if (!loading) {
     return (
       <div className="BotDContainer">
