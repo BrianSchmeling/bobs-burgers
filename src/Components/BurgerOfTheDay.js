@@ -23,6 +23,7 @@ const BurgerOfTheDay = ({ apiURL }) => {
       });
   }, []);
   if (!loading) {
+    // Waits until the API finishes loading before rendering the page
     return (
       <div className="BotDContainer">
         <div className="BotD">

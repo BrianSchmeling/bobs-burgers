@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+
 .videoContainer {
   height: 91vh;
   width: 99.8vw;
@@ -10,9 +12,10 @@
 
 .overlay {
   position: absolute;
-  color: #ffffff;
+  color: black;
   transform: translate(-50%, -50%);
-  font-size: 200px;
-  left: 50%;
+  font-size: 90px;
+  left: 29%;
   top: 20%;
+  font-family: "Rock Salt", cursive;
 }

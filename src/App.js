@@ -49,7 +49,7 @@ function App() {
 
   const uniqueSeason = [
     ...new Map(episodes.map((item) => [item[key], item])).values(),
-  ];
+  ]; //Map's throught the episodes API endpoint, and returns one item for each unqiue season.
 
   const dropdownMaker = uniqueSeason.map((season) => {
     return (
@@ -59,7 +59,7 @@ function App() {
         </Link>
       </p>
     );
-  });
+  }); // Map's through the uniqueSeason array, and creates an item in the dropdown bar for each season.
 
   return (
     <div className="App">

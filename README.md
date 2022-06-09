@@ -25,7 +25,7 @@ Open in browser
 ##### Stretch
 
 - [ ] As a user, I want a search bar to look up any character, episode, burger of the day, food truck, and the store next door
-- [ ] As a user, I want there to be a credits page where they credits roll by just like in the show
+- [x] As a user, I want there to be a credits page where they credits roll by just like in the show
 
 ### Wireframes:
 
@@ -35,3 +35,5 @@ Open in browser
 
 - https://alvarotrigo.com/blog/how-to-create-a-youtube-video-background-with-cssH
   - To learn how to use a video as a background
+- https://stackoverflow.com/questions/15125920/how-to-get-distinct-values-from-an-array-of-objects-in-javascript
+  - Help with how to get unique item values from an array of objects
