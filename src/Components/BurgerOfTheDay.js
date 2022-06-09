@@ -15,6 +15,7 @@ const BurgerOfTheDay = ({ apiURL }) => {
       })
       .then((results) => {
         const randomNum = Math.floor(Math.random() * results.data.length);
+        // selects a random oberject from the array to import the data from
         setBotD(results.data[randomNum]);
         setLoading(false);
       })

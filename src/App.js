@@ -16,6 +16,7 @@ function App() {
   const apiURL = "https://bobsburgers-api.herokuapp.com/";
   const [characters, setCharacters] = useState([]);
   const [episodes, setEpisodes] = useState([]);
+  // Import portion of API data
   useEffect(() => {
     axios
       .get(apiURL + "characters", {
@@ -30,6 +31,7 @@ function App() {
         console.log(error);
       });
   }, []);
+  //import portion of API data
   useEffect(() => {
     axios
       .get(apiURL + "episodes", {
@@ -99,7 +101,6 @@ function App() {
             path={"Characters/:id"}
             element={<CharacterInfo characters={characters} />}
           />
-          {/* <Route path="/Episodes" element={<Episodes />} /> */}
           <Route
             path="/BurgerOfTheDay"
             element={<BurgerOfTheDay apiURL={apiURL} />}
