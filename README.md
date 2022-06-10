@@ -1,6 +1,7 @@
 # Bob's Burgers
 
-<Image of homepage>
+<img width="1512" alt="Screen Shot 2022-06-10 at 8 44 30 AM" src="https://user-images.githubusercontent.com/99563824/173066939-7e5ef9b0-7eb0-4e1a-a335-e8edf66c028d.png">
+
 
 ### Technologies Used:
 
@@ -29,7 +30,22 @@ Open in browser
 
 ### Wireframes:
 
+  ![IMG_20220603_132718 (1)](https://user-images.githubusercontent.com/99563824/173066611-db76bbb6-3104-4d48-a01f-2b3e268dcdd5.jpg)
+
+![IMG_20220603_133704 (1)](https://user-images.githubusercontent.com/99563824/173066674-1b38be45-14f1-4670-bb25-25bac525a1d1.jpg)
+  
+![IMG_20220603_132733 (1)](https://user-images.githubusercontent.com/99563824/173066689-3ed756a9-aa6f-4a93-bf8b-cd5e5a6d5d1a.jpg)
+  
+  ![IMG_20220603_132738 (1)](https://user-images.githubusercontent.com/99563824/173066708-056caa28-5456-4351-a005-616df6ceb92b.jpg)
+
+ ![IMG_20220603_132743 (1)](https://user-images.githubusercontent.com/99563824/173066733-85554f9f-902c-47b5-83d8-e48c560205b6.jpg)
+  
+ ![IMG_20220603_132820 (1)](https://user-images.githubusercontent.com/99563824/173066752-42ae58de-f8ff-4d93-b7e9-bd80a4761439.jpg)
+
+
 ### Unsolved Bugs:
+
+  - The nav bar needs to be updated to be responsive.
 
 ### Resources Used:
 
