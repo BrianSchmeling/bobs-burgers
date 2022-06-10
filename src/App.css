@@ -103,3 +103,15 @@
 #sixthNav {
   grid-column: 6;
 }
+
+@media only screen and (min-width: 0px) and (max-width: 400px) {
+  .navItems {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 1000px) {
+  .navItems {
+    font-size: 1.5rem;
+  }
+}
